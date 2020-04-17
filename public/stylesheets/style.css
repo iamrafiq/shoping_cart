@@ -1,1 +1,21 @@
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
 
+.thumbnail img {
+    max-height: 150px;
+    padding-top: 2px;
+}
+.description {
+    color:rgb(95, 96, 97);
+}
+.price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.row-pad {
+    padding-top: 20px;
+}
