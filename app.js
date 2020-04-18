@@ -6,10 +6,13 @@ var logger = require('morgan');
 var exphbs=require('express-handlebars');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var mongoose=require('mongoose');
 var app = express();
 var hbs= exphbs.create();
-
+//connect mongodb server
+// get the server address and port number first run command: cd usr/bin then command: ./mongo 
+//
+mongoose.connect('localhost:27017/shopping');//shopping is the database name, it will automatically create, you don't have to create database manually
 // view engine setup
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
