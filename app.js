@@ -6,14 +6,15 @@ var logger = require('morgan');
 var exphbs=require('express-handlebars');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var mongoose=require('mongoose');
+var mongoUtil = require( './utils/mongoUtil' );
 var app = express();
 var hbs= exphbs.create();
-//connect mongodb server
-// get the server address and port number first run command: cd usr/bin then command: ./mongo 
-//
-MongoClient.connect("mongodb://localhost:27017/shoping", { useNewUrlParser: true })
-// view engine setup
+
+mongoUtil.connectToServer( function( err, client ) {
+  if (err) console.log(err);
+  // start the rest of your app here
+} );
+
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
