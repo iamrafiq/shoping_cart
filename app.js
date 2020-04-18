@@ -12,7 +12,7 @@ var hbs= exphbs.create();
 //connect mongodb server
 // get the server address and port number first run command: cd usr/bin then command: ./mongo 
 //
-mongoose.connect('localhost:27017/shopping');//shopping is the database name, it will automatically create, you don't have to create database manually
+MongoClient.connect("mongodb://localhost:27017/shoping", { useNewUrlParser: true })
 // view engine setup
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
