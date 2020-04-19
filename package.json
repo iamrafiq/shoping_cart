@@ -6,16 +6,19 @@
     "start": "if [[$NODE_ENV=='production']]; then node ./bin/www; else nodemon ./bin/www; fi"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
     "csurf": "^1.11.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-handlebars": "^4.0.3",
+    "express-session": "^1.17.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "mongodb": "^3.5.6",
     "mongoose": "^5.9.9",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "passport": "^0.4.1"
   },
   "devDependencies": {
     "faker": "^4.1.0",
